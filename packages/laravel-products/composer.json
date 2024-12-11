@@ -1,0 +1,31 @@
+{
+    "name": "arneon/laravel-products",
+    "description": "Product product management",
+    "minimum-stability": "stable",
+    "version": "1.0.0",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arnaldo Orozco Nuñez",
+            "email": "arneon@gmail.com"
+        }
+    ],
+    "require": {
+        "arneon/laravel-categories": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Arneon\\LaravelProducts\\": "src/"
+        },
+        "classmap": [
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+
+            ]
+        }
+    }
+}

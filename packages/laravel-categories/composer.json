@@ -1,0 +1,30 @@
+{
+    "name": "arneon/laravel-categories",
+    "description": "Product category management",
+    "minimum-stability": "stable",
+    "version": "1.0.0",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arnaldo Orozco Nuñez",
+            "email": "arneon@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Arneon\\LaravelCategories\\": "src/"
+        },
+        "classmap": [
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+
+            ]
+        }
+    }
+}

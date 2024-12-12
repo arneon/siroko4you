@@ -64,31 +64,6 @@ services:
             retries: 3
             timeout: 5s
 
-    mongodb:
-        image: mongo
-        restart: always
-        environment:
-            MONGO_INITDB_ROOT_USERNAME: '${MONGODB_USER}'
-            MONGO_INITDB_ROOT_PASSWORD: '${MONGODB_PASSWORD}'
-        volumes:
-            - sail-mongodb:/data/db
-        ports:
-            - 27017:27017
-        networks:
-            - sail
-
-    mongo-express:
-        image: mongo-express
-        restart: always
-        ports:
-            - 8081:8081
-        environment:
-            ME_CONFIG_MONGODB_ADMINUSERNAME: '${MONGODB_USER}'
-            ME_CONFIG_MONGODB_ADMINPASSWORD: '${MONGODB_PASSWORD}'
-            ME_CONFIG_MONGODB_URL: mongodb://${MONGODB_USER}:${MONGODB_PASSWORD}@mongodb:27017/
-            ME_CONFIG_BASICAUTH:
-        networks:
-            - sail
 networks:
     sail:
         driver: bridge
@@ -96,6 +71,4 @@ volumes:
     sail-mysql:
         driver: local
     sail-redis:
-        driver: local
-    sail-mongodb:
         driver: local
